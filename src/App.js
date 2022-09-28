@@ -33,13 +33,6 @@ export default function App() {
         console.log('THE END')
     }
 
-    //function chuteInput(){
-    //    if(palavraChave == chute){
-    //        console.log("acertou")
-    //    }else{
-    //        console.log('perdeu')
-    //    }   
-    //}
 
     function chuteInput(){
         let palavraChute = ""
@@ -54,7 +47,6 @@ export default function App() {
         finalizaGame()
     }
 
-    // const texto = texto.replace(/[ÁÃÀ]/, "A");
 
     function escolhePalavra(){
         const numeroAleatorio = Math.floor(Math.random() * palavras.length)
@@ -68,7 +60,6 @@ export default function App() {
         arrayPalavra.forEach((letra => traco.push(' _ ')))
         setPalavraEscondida(traco)
 
-        //const palavraFormatada = palavraEscolhida.replace(/[^a-zA-Z\s]/g, "a")
         const palavraFormatada = palavraEscolhida.normalize("NFD").replace(/[^a-z\s]/g, "");
         setPalavraEspecial(palavraFormatada)
 
@@ -98,7 +89,6 @@ export default function App() {
             finalizaGame()
         }
     }
-
 
     function errouLetra(l){
         const totErros = errou+1
